@@ -10,6 +10,7 @@
 
     if(!isset($_SESSION['username'])){
         header("location:index.php");
+        new change;
     }
 
     elseif($_SESSION['permission']==0){
