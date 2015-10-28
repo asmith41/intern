@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://localhost/new/html/aaa/admin_page.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./admin_page.php_files/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="./admin_page.php_files/jquery.min.js"></script>
+        <script src="./admin_page.php_files/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./admin_page.php_files/style.css">
+    </head>
+
+
+    <body><nav class="navbar  navbar-static-top navbar-default mero-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+            
+                <a class="navbar-brand" href="http://localhost/new/html/aaa/admin_page.php#"><h4 id="logo">MBR</h4></a>
+            </div>
+    
+            <div class="collapse navbar-collapse " id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                    <li>
+                        <a href="./admin_page.php_files/admin_page.php.html"><span class="glyphicon glyphicon-user"> Welcome admin </span></a>   
+                    </li>
+ 
+                    <li>
+                        <a href="http://localhost/new/html/aaa/admin_page.php#" data-toggle="modal" data-target="#myModalViewMessage"><span class="glyphicon glyphicon-menu-hamburger"> View Order</span></a>                   </li> 
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> change password</a></li> -->
+                    <li><a href="http://localhost/new/html/aaa/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+  
+	  <style>
+    body { 
+      background-image: url('assets/images/b.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+
+
+	
+			
+		<!-- model to show stock of inventory for admin-->
+		<div id="myModal" class="modal fade" role="dialog">
+    		<div class="modal-dialog modal-lg">
+        		<!-- Modal content-->
+        		<div class="modal-content">
+            		<div class="modal-header">
+                		<button type="button" class="close" data-dismiss="modal">×</button>
+                		<h4 class="modal-title">STOCK</h4>
+            		</div>
+            		<!-- contents of model here -->
+            		<div class="modal-body">
+                		 					    <!-- shows central inventory stock -->
+                		<h4>Central Inventory</h4>
+                		<table class="table table-bordered">
+                    		<tbody><tr>
+                        			<th>SN</th>
+                        			<th>Bike</th>
+                        			<th>Quantity in numbers</th>
+                    		</tr>
+
+                    		                            			    <tr>
+                            				    <td>1</td>
+                            				    <td>giant_anthem2014</td>
+                                			    <td>1000</td>
+                            			     </tr>                            			    <tr>
+                            				    <td>2</td>
+                            				    <td>giant_rincon2015</td>
+                                			    <td>100000528</td>
+                            			     </tr>                        </tbody></table>
+                    	<h4>Branch Inventory</h4><table class="table table-bordered">
+                    		
+                    		<tbody><tr>
+                        			<th>SN</th>
+                        			<th>Bike</th>
+                        			<th>Quantity in numbers</th>
+                    		</tr>
+                   			                           			     <tr>
+                             				<td>1</td>
+                             				<td>giant_rincon2015</td>
+                            				<td>311</td>
+                           				</tr>                    	</tbody></table>
+            			
+                    </div>        
+                         <div class="modal-footer">
+               		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           	            </div>
+        	   </div>
+            </div>
+        </div>
+
+
+
+<!--branch inventory -->
+<div id="myModal_branch" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">STOCK</h4>
+            </div>
+            <!-- contents of model here -->
+            <div class="modal-body">
+                                <!-- shows branch inventory stock -->
+
+                 <h4>Branch Inventory</h4><table class="table table-bordered">
+                    
+                    <tbody><tr>
+                        <th>SN</th>
+                        <th>Bike</th>
+                        <th>Quantity in numbers</th>
+                    </tr>
+                                            <tr>
+                                <td>1</td>
+                                <td>giant_rincon2015</td>
+                                <td>311</td>
+                            </tr>                </tbody></table>
+            </div>
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<!-- shows total sales information -->
+<div id="myModal_report" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">SALES REPORT</h4>
+            </div>
+            <!-- contents of model here -->
+            <div class="modal-body">
+                
+
+                <!-- shows sales information -->
+
+                <table class="table table-bordered">
+                    <tbody><tr>
+                        <th>SN</th>
+                        <th>Branch name</th>
+                        <th>Bike</th>
+                        <th>Number Of Sales</th>
+                    </tr>
+                                            <tr>
+                                <td>1</td>
+                                <td>admin</td>
+                                <td>XT_200</td>
+                                <td>5</td>
+                            </tr>                            <tr>
+                                <td>2</td>
+                                <td>admin</td>
+                                <td>XT_200</td>
+                                <td>1</td>
+                            </tr>                            <tr>
+                                <td>3</td>
+                                <td>admin</td>
+                                <td>XT_200</td>
+                                <td>1</td>
+                            </tr>                </tbody></table>
+            </div>
+        
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- model to send message -->
+<div id="myModalSendMessage" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Message</h4>
+            </div>
+            <!-- contents of model here -->
+            <div class="modal-body">
+                <form action="http://localhost/new/html/aaa/order.php" method="POST">
+                    <label>choose which bike to make order</label>
+                    <select name="bike_order" class="form-control">
+                        <option value="1">giant_rincon2015</option>                     </select>
+                    <label>Enter the number of the items</label>
+                    <input name="num" type="number" class="form-control" placeholder="number of bikes" required="">
+                    <!-- <intput name="number" type="number" class="form-control" required> -->
+
+                    <!-- <intput name='makeorder' type="text" class="form-control" id="" placeholder="" required>            -->
+                    <div class="modal-footer">
+                        <button name="submit_order" type="submit" class="btn btn-primary">Make Order</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>        
+
+<!-- model to view message -->
+<div id="myModalViewMessage" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Orders</h4>
+            </div>
+            <!-- contents of model here -->
+            <div class="modal-body">
+                          
+
+                <div class="modal-footer">
+                    <!-- <form action='order.php' method='POST'>
+                        <button type="submit" name='clear_order' class="btn btn-danger">Clear Orders</button>
+                    </form> -->    
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- for deleting the branch -->
+<!-- checking empty space in the input form -->
+<script type="text/javascript">
+    function required(t) {
+    var inputs = $(t).find('input[required]');
+    var result = true;
+    inputs.each(function(index){
+        var tex = $(this).val();
+        if(/^\s+$/.test(tex)) {
+            alert("You cannot enter just spaces as input.");
+            result = false;
+            return false;
+        }
+    });
+        return result;
+    }
+</script>
+
+
+
+<!-- main body starts -->
+    <div class="container-fluid">
+        <div class="col-lg-2 col-xs-6 del">
+                <a href="http://localhost/new/html/aaa/admin_page.php#add_bikes">
+                    <img src="./admin_page.php_files/q.png" class="img-responsive img-circle inset" width="210em">
+                        <h4 id="image_h1">ADD BIKES</h4>
+                </a>
+        </div>
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#add_branch1">
+                <img src="./admin_page.php_files/aa.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">ADD BRANCH</h4> 
+            </a>
+        </div>
+
+        <div class="clearfix visible-xs-block visible-sm-block visible-md-block"></div>
+
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#deliver1">
+                <img src="./admin_page.php_files/e.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">DELIVER</h4>
+            </a>
+        </div>
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#" data-toggle="modal" data-target="#myModal">
+                <img src="./admin_page.php_files/w.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">VIEW STOCK</h4>
+            </a>         
+        </div>
+
+         <div class="clearfix visible-xs-block visible-sm-block"></div>
+
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#add_to_inventory">
+                <img src="./admin_page.php_files/z.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">ADD TO INVENTORY</h4>
+            </a>
+        </div>
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#sell_bikes">
+                <img src="./admin_page.php_files/x.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">SELL</h4>
+            </a>       
+        </div>
+
+         <div class="clearfix visible-xs-block visible-sm-block visible-lg-block"></div>
+
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#del_bikes">
+                <img src="./admin_page.php_files/del.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">DELETE BRANCH</h4>
+            </a>           
+        </div>
+
+        <div class="col-lg-2 col-xs-6 del">
+            <a href="http://localhost/new/html/aaa/admin_page.php#" data-toggle="modal" data-target="#myModal_report">
+                <img src="./admin_page.php_files/rep.png" class="img-responsive img-circle inset" width="210em">
+                <h4 id="image_h1">REPORT</h4>
+            </a>           
+        </div>
+
+         <div class="clearfix visible-xs-block visible-sm-block"></div>
+
+        <div class="col-md-12 jumbotron" id="back">
+            <h1 id="jomboH">WELCOME TO MANAGE YOUR STORE</h1>
+            <p id="jomboP">Please select the above listed icons to perform specified action</p>   
+        </div>
+    </div>
+
+    <div class="scroll-up">
+        <a href="http://localhost/new/html/aaa/admin_page.php#"><img src="./admin_page.php_files/up.png"></a>
+    </div>    
+ 
+    <!-- for the form to add bikes -->
+    <div class="container-fluid form-background">
+        <div id="ad" class="row">
+        	<a id="add_bikes" href="http://localhost/new/html/aaa/admin_page.php#add_bikes" name="add_bikes"><p id="p1">Add new bike information</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" onsubmit="return required(this)" method="POST">
+                    <div class="form-group">
+                        <label>Enter bike brand followed by an underscore and a model</label>
+                        <input name="bike_brand" type="text" class="form-control" id="button1" placeholder="example :: giant_xtc2014" required="">           
+                    </div>
+                        
+                    <button type="submit" name="addbikes" class="btn btn-primary button1" id="AddBike">upload</button>
+            
+                                    
+                      
+                    <!-- <button type="submit" name="add" class="btn btn-primary" id="button1">confirm</button> -->
+                </form>
+            </div>            
+        </div>
+    </div> 
+
+    <!--for the form to add branch  -->
+    <div class="container-fluid form-background">
+        <div class="row">
+            <a href="http://localhost/new/html/aaa/admin_page.php#add_branch1" id="add_branch1"><p id="p1">Add Branch</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" onsubmit="return confirm() &amp; required(this)" method="POST">
+                    <div id="error-div"></div>
+                        <div class="form-group">
+                            <label>Branch name</label>
+                                <input name="branch_name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name of the branch" required="">
+                            
+                                <label>Enter location of the branch</label>
+                                <input name="branch_loc" type="text" class="form-control" id="exampleInputPassword1" placeholder="location" required="">
+
+                                <label>Enter Username</label>
+                                <input name="branch_un" type="text" class="form-control" id="exampleInputPassword1" placeholder="username" required="">
+                    
+                                <label>Enter Password</label>
+                                <input name="branch_pw" type="password" class="form-control" id="password" placeholder="password" required="">
+
+                                <label for="exampleInputEmail1">Re-enter Password</label>
+                                <input name="branch_pw" type="password" class="form-control" id="RePassword" placeholder="password" required="">
+                                
+
+                                <script type="text/javascript">
+                                    function confirm() {
+                                        var password = document.getElementById('password').value;
+                                        var repassword = document.getElementById('RePassword').value;
+                                        if (password == repassword) {
+                                            return true;
+                                        }
+                                        var errorDiv = document.getElementById('error-div');
+                                        errorDiv.className = "alert alert-danger";
+                                        errorDiv.innerHTML = "the passwords didn't match, please try again";
+                                        return false;
+                                    }
+                                </script>
+                        </div>                                            
+                            <button type="add_branch" name="add_branch" class="btn btn-primary button1" id="add_branch">upload</button>
+                                                </form>
+            </div>            
+        </div>
+    </div>
+
+
+    <!-- form to deliver to branch inventory -->
+    <div class="container-fluid form-background">
+        <div class="row">
+            <a href="http://localhost/new/html/aaa/admin_page.php#deliver1" id="deliver_id" name="deliver1"><p id="p1">Deliver Bikes to branch</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" method="POST">
+                    <div class="form-group">
+                        <label>Branch name to deliver to</label>                                
+                        
+                        <select name="deliver_branch_id" class="form-control">
+                            <option value="36">admin</option> <option value="50">dharan</option> <option value="51">dfdf</option> <option value="52">     </option>                         </select>           
+                        <br>
+                        <label>Choose the bike model to deliver</label>
+                            <select name="deliver_bike_id" class="form-control">                              
+                                <option value="2">giant_anthem2014</option> <option value="1">giant_rincon2015</option>                             </select>
+                        <br>
+                        <!-- <input type="text" class="form-control" id="exampleInputPassword1" placeholder="brand of the bike" required> --> 
+                        <label>Enter the number of the bikes to deliver</label>
+                            <input name="number_of_bikes" type="number" class="form-control" id="exampleInputPassword1" placeholder="no of bikes" min="1" required="">
+                            <label>Enter the limit number for the bike</label>
+                            <input name="limit" type="number" class="form-control" placeholder="limit number of the bike for the branch" min="1" required="">
+                    </div>                      
+                    
+                    <button type="submit" name="branch_inv_submit" class="btn btn-primary button1" id="branch_inventory">upload</button>    
+                                        </form>
+            </div>            
+        </div>
+    </div>
+
+    <!-- form to add bikes to inventory -->
+    <div class="container-fluid form-background">
+        <div class="row">
+            <a id="add_inv" href="http://localhost/new/html/aaa/admin_page.php#add_to_inventory" name="add_to_inventory"><p id="p1">Add to inventory</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" method="POST">
+                    <div class="form-group">
+                        <label>Bike brand to enter to inventory</label>
+                        <!--  <input name= "brand_id" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter brand of the bike" required> -->  
+                        <select name="brand_id" class="form-control">
+                            <option value="84">asdffdsa</option> <option value="87">fddsa</option> <option value="2">giant_anthem2014</option> <option value="1">giant_rincon2015</option> <option value="86">qwqwqwqw</option> <option value="83">trek_20111</option> <option value="28">XT_200</option>                         </select>
+                        
+                        <label>enter numbers of bikes</label>
+                        <input name="number" type="number" class="form-control" id="exampleInputPassword1" placeholder="no. of bikes" min="1" required="">
+                        <label>set the alert limit number for the bike</label>
+                        <input name="limit" type="number" class="form-control" placeholder="enter limit" min="1" required="">
+                    </div>
+                        
+                    <button name="inv_submit" type="submit" class="btn btn-primary button1" id="inventory">upload</button>
+                        
+                                    </form>
+            </div>            
+         </div>
+    </div> 
+
+
+    <!-- form to sell bikes -->
+    <div class="container-fluid form-background">
+        <div class="row">
+            <a id="sell_id" href="http://localhost/new/html/aaa/admin_page.php#sell_bikes" name="sell_bikes"><p id="p1">sell bike</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" method="POST">
+                    <div class="form-group">
+                        <label>Enter the brand of bike to sell</label> 
+                            <select name="bike_id" class="form-control">
+                                <option value="1">giant_rincon2015</option>                             </select>
+                        <!-- <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter brand of the bike" required> -->
+                                          
+                        <label>enter numbers of to sell</label>
+                        <input name="numbers" type="number" class="form-control" id="exampleInputPassword1" placeholder="no. of bikes" min="1" required="">
+
+                    </div>
+                    
+                    <button name="sell_button" type="submit" class="btn btn-primary button1" id="sell_bikes">upload</button>
+                    
+                  	      
+
+                </form>
+            </div>            
+        </div>
+    </div> 
+
+
+    <!-- for the form to delete bikes -->
+    <div class="container-fluid form-background">
+        <div class="row">
+            <a id="del_bikes" href="http://localhost/new/html/aaa/admin_page.php#del_bikes" name="del_bikes"><p id="p1">Choose a branch to delete</p></a>
+            <div class="col-md-6 col-md-offset-3 form-center">
+                <form action="./admin_page.php_files/admin_page.php.html" method="POST">
+                    <div class="form-group">
+                        <label>choose the bike branch you want to delete</label>           
+                    </div>
+                    
+                    <select name="branch_id" class="form-control">
+                        <option value="36">admin</option> <option value="50">dharan</option> <option value="51">dfdf</option> <option value="52">     </option>                     </select><br>
+                              
+                    <button name="delete" class="btn btn-danger button1">Delete</button>
+                    
+                                      
+                    <!-- <button type="submit" name="add" class="btn btn-primary" id="button1">confirm</button> -->
+                </form>
+            </div>            
+        </div>
+    </div> 
+    
+  <footer class="footer">
+      <div class="container-fluid">
+          <h2 id="footer-h2"> all rights reserverd by multi branch cycle record 2015</h2>
+</div></footer>
+
+</body></html>

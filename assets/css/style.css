@@ -1,0 +1,174 @@
+  /*login page ko border style*/
+  @media(min-width:1100px){
+  #in-border{
+    margin-top:6em;
+    padding: 20px 40px; 
+    background: #dddddd;
+    width: 400px;
+    height:22em;
+    border-radius: 40px 18px;
+    background-color: hsla(180, 20%, 80%, 0.3);
+    box-shadow: 1px 1px 5px black;
+  }
+}
+
+a{
+  color:#323232;
+}
+
+a:hover{
+  color:#4b4b4b;
+  text-decoration:none;
+}
+/*login page ko p*/
+  #p1{
+    margin-top:1em;
+    text-align: center;
+    font-family:Century Gothic;
+    font-size:2em;
+  }
+/*index page ko login button*/
+  .button1{
+   display: block; 
+   width: 100%;
+   margin-bottom:2em;
+  }
+/*footer.php ko style*/
+.footer{
+  position:relative;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:5em;
+  background-color: hsla(200, 20%, 96%, 1);
+}
+/*fotter ko p-style*/
+#footer-h2{
+  font-size:1em;
+  margin-top: 15px;
+  text-align: center;
+   font-family: Century Gothic;
+}
+/* function action button ko style */
+.inset{
+  margin-top:6em;
+}
+/* function action button ko style */
+.inset:hover{
+  color:#eee;
+  text-shadow:0 0 1px #666;
+  text-decoration:none;
+  box-shadow:0 0 4px #222 inset;
+  opacity:0.9
+  }
+/*ul ko no border*/
+.no-bullet {
+   list-style:none;
+}
+/*header style*/
+.navbar-default{
+  margin-bottom:-1em;
+    background-color: hsla(80, 20%, 90%, 1);
+
+}
+
+.navbar-brand img{
+  margin-top: -0.7em;
+}
+
+#navbar-logo{
+  width:25em;
+}
+#image_h1{
+  color:white;
+   font-family:Century Gothic;
+  text-align: center;
+}
+.no-bullet{
+  margin: 0px auto;
+}
+
+
+/*#php_content{
+  margin-top:-0.4em;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size:2em;
+  text-align: center;
+}*/
+
+.form-1{
+  height:20em;
+}
+
+.mero-nav{
+  border-bottom: 1px solid white;
+  box-shadow: 1px 3px 20px grey;
+}
+/*registration , add haru ko form ko background style lai*/
+.form-background{
+  margin-top:5em;
+  width:100%;
+  background-color: #2b2a3a;
+  margin-bottom:5em;
+
+}
+/*to keep those forms in center*/
+#image-distance{
+  top-margin:-5em;
+}
+
+#myModal{
+  width:100%
+}
+
+ #content{
+  border-radius: 2px solid red;
+}
+
+#back{
+  margin-top:3em;
+  margin-left:2em;
+  background-color: hsla(180, 20%, 80%, 0.5) !important;
+  width:60%;
+}
+#jomboH{
+  font-size:2em;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color:white ;
+}
+#jomboP{
+  font-family:Century Gothic;
+  color:#383838;
+}
+#logo{
+  margin-top:-0.2em;
+  font-size:2em;
+  color:#262a2b;
+   font-family: Century Gothic;
+}
+.del{
+  margin-top:-3.5em;
+}
+@media(min-width: 700px){
+.scroll-up{
+  position: fixed;
+  top:85%;
+  left:90%;
+  z-index:1000;
+  }
+}
+ @media(min-width:40px) and (max-width: 699px){
+.scroll-up{
+  position: fixed;
+  top:80%;
+  z-index:1000;
+  left:80%;
+  width:30%;
+  }
+}
+.label-style{
+  color:white;
+}
+#user{
+ font-family: Century Gothic; 
+}
