@@ -11,6 +11,7 @@
     if(!isset($_SESSION['username'])){
         header("location:index.php");
         new change;
+        change again;
     }
 
     elseif($_SESSION['permission']==0){
